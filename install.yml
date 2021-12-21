@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: load debian
+      include_tasks: debian.yml
+      when: ansible_os_family == 'Debian'
+
+    - name: install python packages
+      ansible.builtin.pip:
+        requirements: requirements.txt
+      args:
+        chdir: .

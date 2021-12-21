@@ -1,0 +1,6 @@
+awscli
+ecs-deploy
+docker-compose
+tldr
+virtualenv
+virtualenvwrapper

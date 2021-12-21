@@ -1,0 +1,12 @@
+---
+- name: debian | install essentials
+  become: yes
+  ansible.builtin.apt:
+    name:
+      - vim
+      - python3-pip
+      - jq
+      - git
+    state: present
+    update_cache: yes
+
