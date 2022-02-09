@@ -3,9 +3,13 @@
   connection: local
 
   tasks:
-    - name: load debian
+    - name: setup debian
       include_tasks: debian.yml
       when: ansible_os_family == 'Debian'
+
+    - name: setup Fedora
+      include_tasks: fedora.yml
+      when: ansible_distribution == 'Fedora'
 
     - name: install python packages
       ansible.builtin.pip:

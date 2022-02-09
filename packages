@@ -1,0 +1,6 @@
+npm fx -- like jq but interactive
+vagrant -- for vagrant on fedora 32+ look https://github.com/hashicorp/vagrant/issues/11020
+
+go:
+  awless
+  terraform-docs
